@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
+from math import ceil
 
 col_names = ['class', 'alcohol', 'ma', 'ash', 'aoa', 'mg',
              'tp', 'fl', 'np', 'pr', 'color', 'hue', 'od', 'proline']
@@ -36,34 +37,34 @@ print(score)
 # 3. Margin selection — we select ‘k’ samples with the lowest difference between the two highest class probabilities, i.e., a higher figure will be given for samples whose model was very certain about a single class and lower to samples whose class probabilities are very similar.
 
 # In principle, active learning can be performed with any classification algorithm that is capable of providing uncer- tainty estimates with class predictions for new samples.
+for i in range(ceil(xTest.shape[0]*0.15)):
+    # Zbieramy prawdopodobieństwa klasyfikacji zbioru testowego
+    df = pd.DataFrame(clf.predict_proba(xTest))
+    df.index = xTest.index
 
-# Zbieramy prawdopodobieństwa klasyfikacji zbioru testowego
-df = pd.DataFrame(clf.predict_proba(xTest))
-df.index = xTest.index
+    # Wybieramy największe dla kadej klasy
+    df['max_value'] = df.max(axis=1)
 
-# Wybieramy największe dla kadej klasy
-df['max_value'] = df.max(axis=1)
+    # Sortujemy majejąco
+    sorted_df = df.sort_values(by='max_value')
 
-# Sortujemy majejąco
-sorted_df = df.sort_values(by='max_value')
+    # Wybieramy ~20% najgorszych i wrzucamy je do zbioru uczącego
+    indexes = sorted_df[:1].index.values
+    yTrain_AL = pd.DataFrame(yTest).loc[indexes]
+    xTrain_AL = pd.DataFrame(xTest).loc[indexes]
 
-# Wybieramy ~20% najgorszych i wrzucamy je do zbioru uczącego
-indexes = sorted_df[:30].index.values
-yTrain_AL = pd.DataFrame(yTest).loc[indexes]
-xTrain_AL = pd.DataFrame(xTest).loc[indexes]
+    xTest = xTest.drop(indexes)
+    yTest = yTest.drop(indexes)
 
-xTest = xTest.drop(indexes)
-yTest = yTest.drop(indexes)
+    xTrain = pd.concat([xTrain, xTrain_AL])
+    yTrain = np.concatenate([yTrain, yTrain_AL['class']])
 
-xTrain = pd.concat([xTrain, xTrain_AL])
-yTrain = np.concatenate([yTrain, yTrain_AL['class']])
+    # Ponownie uczymy klasyfikator
+    clf.fit(xTrain, yTrain)
 
-# Ponownie uczymy klasyfikator
-clf.fit(xTrain, yTrain)
+    predictions = clf.predict(xTest)
+    score = accuracy_score(yTest, predictions)
 
-predictions = clf.predict(xTest)
-score = accuracy_score(yTest, predictions)
-
-# Wynik po uczeniu z obiektami najtrudniejszymi w klasyfikacji
-#
-print(score)
+    # Wynik po uczeniu z obiektami najtrudniejszymi w klasyfikacji
+    #
+    print('Run #', i, score)
