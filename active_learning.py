@@ -17,6 +17,9 @@ dataset = pd.read_csv('./datasets/wine/wine.data', names=col_names)
 y = dataset['class']  # Klasy
 x = dataset[col_names[1:]]  # Pozostałe cechy
 
+# Dobrze wybrać zbiór treningowy
+# Jak wybierzemy źle, to model juz w stanie wyjść z lokalnego minimum
+
 xTrain, xTest, yTrain, yTest = train_test_split(
     x, y, test_size=0.97)
 
@@ -37,7 +40,7 @@ print(score)
 # 3. Margin selection — we select ‘k’ samples with the lowest difference between the two highest class probabilities, i.e., a higher figure will be given for samples whose model was very certain about a single class and lower to samples whose class probabilities are very similar.
 
 # In principle, active learning can be performed with any classification algorithm that is capable of providing uncer- tainty estimates with class predictions for new samples.
-for i in range(ceil(xTest.shape[0]*0.15)):
+for i in range(ceil(xTest.shape[0]*0.10)):
     # Zbieramy prawdopodobieństwa klasyfikacji zbioru testowego
     df = pd.DataFrame(clf.predict_proba(xTest))
     df.index = xTest.index
@@ -47,6 +50,7 @@ for i in range(ceil(xTest.shape[0]*0.15)):
 
     # Sortujemy majejąco
     sorted_df = df.sort_values(by='max_value')
+    # sorted_df = df.sample(n=1)
 
     # Wybieramy ~20% najgorszych i wrzucamy je do zbioru uczącego
     indexes = sorted_df[:1].index.values
