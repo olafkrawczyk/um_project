@@ -21,7 +21,7 @@ x = dataset[col_names[1:]]  # Pozostałe cechy
 # Jak wybierzemy źle, to model juz w stanie wyjść z lokalnego minimum
 
 xTrain, xTest, yTrain, yTest = train_test_split(
-    x, y, test_size=0.97)
+    x, y, test_size=0.95)
 
 clf = SVC(kernel='linear', gamma='auto', probability=True, C=10000.0)
 clf.fit(xTrain, yTrain)
