@@ -1,0 +1,308 @@
+ls
+1
+2
+read.table
+read.tabel('~/Documents.haberman.data')
+read.table('~/Documents.haberman.data')
+read.table('~/Documents/haberman.data')
+read.cvs('~/Documents/haberman.data')
+read.csv('~/Documents/haberman.data')
+mydata <- read.csv('~/Documents/haberman.data')
+mydata
+help(plot)
+install.packages(​"http://www.bnlearn.com/releases/​bnlearn_latest.tar.gz")
+install.packages("~/Downloads/bnlearn_4.4.tar.gz")
+install.packages("bnlearn")
+source("http://bioconductor.org/biocLite.R")
+install.packages("bnlearn")
+system('defaults write org.R-project.R force.LANG en_US.UTF-8')
+install.package("bnlearn")
+install.packages("bnlearn")
+librarny(bnlearn)
+library(bnlearn)
+e = empty.graph(LETTERS[1:6])
+class(e)
+e
+install.packages(​"http://www.bnlearn.com/releases/​bnlearn_latest.tar.gz")
+bnlearn
+install.packages("bnlearn")
+library(bnlearn)
+e = empty.graph(LETTERS[1:6])
+class(e)
+e
+empty.graph(LETTTERS[1:6], num = 2)
+empty.graph(LETTERS[1:6], num = 2)
+LETTERS
+ls
+ls(
+)
+ll
+clear
+data <- read.csv(file="~/Documents/breast-cancer-wisconsin.data")
+data
+data <- read.csv(file="~/Documents/wdbc.data", header=FALSE)
+data
+library(caret)
+install(caret)
+import(caret)
+install.packages("caret")
+library(caret)
+createDataPartition(data, ;)
+createDataPartition(data, p=.7, list=FALSE)
+createDataPartition(data, p=0.7, list=FALSE)
+trainIndex <- createDataPartition(data, p=0.7, list=FALSE)
+data
+trainIndex <- createDataPartition(data$V2, p=0.7, list=FALSE)
+data[trainIndex,]
+data[-trainIndex,]
+summary(data[-trainIndex,])
+summary(data[trainIndex,])
+dataTrain <- data[trainIndex]
+dataTrain
+dataTrain <- data[trainIndex,]
+dataTrain
+shapiro.test
+c(0.986111,#
+0.972222,#
+0.972222,#
+0.958333,#
+0.958333,#
+0.958333,#
+0.972222,#
+0.972222,#
+0.930555,#
+0.930555,#
+0.958333,#
+0.944444,#
+0.944444,#
+0.958333,#
+0.958333)
+elo <- c(0.986111,#
+0.972222,#
+0.972222,#
+0.958333,#
+0.958333,#
+0.958333,#
+0.972222,#
+0.972222,#
+0.930555,#
+0.930555,#
+0.958333,#
+0.944444,#
+0.944444,#
+0.958333,#
+0.958333)
+elo
+shapiro.test(elo)
+elo2 <- c(0.9861111111111112,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9583333333333334,#
+0.9583333333333334,#
+0.9583333333333334,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9305555555555556,#
+0.9305555555555556,#
+0.9583333333333334,#
+0.9444444444444444,#
+0.9444444444444444,#
+0.9583333333333334,#
+0.9583333333333334,)
+elo2 <- c(0.9861111111111112,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9583333333333334,#
+0.9583333333333334,#
+0.9583333333333334,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9305555555555556,#
+0.9305555555555556,#
+0.9583333333333334,#
+0.9444444444444444,#
+0.9444444444444444,#
+0.9583333333333334,#
+0.9583333333333334)
+shapiro.test(elo2)
+0,860465116#
+0,80620155#
+0,813953488#
+0,821705426#
+0,790697674#
+0,821705426#
+0,829457364#
+0,813953488#
+0,76744186#
+0,759689922#
+0,821705426#
+0,790697674#
+0,790697674#
+0,759689922#
+0,775193798#
+0,801550388
+x <- c(0.9861111111111112,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9583333333333334,#
+0.9583333333333334,#
+0.9583333333333334,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9305555555555556,#
+0.9305555555555556,#
+0.9583333333333334,#
+0.9444444444444444,#
+0.9444444444444444,#
+0.9583333333333334,#
+0.9583333333333334)
+y <- c(0.9444444444444444,#
+0.9722222222222222,#
+0.9722222222222222,#
+0.9444444444444444,#
+0.9722222222222222,#
+0.8472222222222222,#
+0.9166666666666666,#
+0.9444444444444444,#
+0.9305555555555556,#
+0.9583333333333334,#
+0.9027777777777778,#
+0.9305555555555556,#
+0.9166666666666666,#
+0.9861111111111112,#
+0.9444444444444444)
+wilcox.test(x, y,paired=TRUE, alternative = "two.sided")
+wilcox.test(x, y,paired=TRUE)
+wilcox.test(x, y,paired=TRUE, alternative = "greater)
+""
+)
+")
+wilcox.test(x, y,paired=TRUE, alternative = "greater")
+wilcox.test(x, y,paired=TRUE, alternative = "less")
+wilcox.test(y, x, paired=TRUE, alternative = "greater")
+wilcox.test(y, x, paired=TRUE, alternative = "less")
+chrie
+chdir
+setwd('~/Desktop/um_project/')
+ls
+ls()
+dat = read.csv("iris_35.csv", header=TRUE)
+dat
+dat$AL
+View(dat)
+library(reshape2)
+myDataLong <- melt(dat, id.vars=c("X"))
+myDataLong
+install.packages("stats")
+library(stats)
+friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X)
+dat = read.csv("wine_20.csv", header=TRUE)
+myDataLong <- melt(dat, id.vars=c("X"))
+myDataLong
+myDataLong <- melt(dat, id.vars=c("X"))
+friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X)
+get_friedman(filename) {}
+get_friedman(filename) {}
+get_friedman(filename) {
+get_friedman_score <- function(filename) {}
+get_friedman_score <- function(filename) {
+dat <- read.csv(filename, header=TRUE)
+myDataLong <- melt(dat, id.vars=c("X"))
+return(friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X))
+}
+get_friedman_score("wine_05.csv")
+get_friedman_score("iris_35.csv.csv")
+get_friedman_score("iris_35.csv")
+get_friedman_score("iris_20.csv")
+get_friedman_score("iris_05.csv.csv")
+get_friedman_score("iris_05.csv")
+get_friedman_score("breast_cancer_05.csv")
+wilcox.test(myDataLong$value, myDataLong$variable, paired=TRUE)
+myDataLong$value
+pairwise.wilcox.test(myDataLong$value, myDataLong$variable, paired=TRUE)
+get_friedman_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X)#
+	pairwise.wilcox.test(myDataLong$value, myDataLong$variable, paired=TRUE)#
+}
+get_friedman_score("iris_35.csv")
+get_friedman_score("breast_cancer_35.csv")
+get_friedman_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X)#
+}#
+get_wilcox_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	pairwise.wilcox.test(myDataLong$value, myDataLong$variable, paired=TRUE)#
+}
+get_friedman_score("iris_10.csv")
+get_wilcox_score("iris_10.csv")
+get_friedman_score("wine_05.csv.csv")
+get_friedman_score("wine_05.csv")
+get_wilcox_score("wine_05.csv")
+get_wilcox_score("wine_10.csv")
+get_wilcox_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	colsMean(dat)#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	pairwise.wilcox.test(myDataLong$value, myDataLong$variable, paired=TRUE)#
+}
+get_wilcox_score("wine_10.csv")
+dat
+mean(dat)
+df <- dat.frame(x=1:3)
+mean(dat$AL)
+mean(dat[1])
+mean(dat ~ AL)
+mean(dat)
+typeof(dat)
+x <- dat.as_matrix
+x <- as.matrix(dat)
+x
+mean(x[:3])
+mean(x[,3])
+mean(x[,1:3])
+mean(x)
+colMeans(x)
+colMeans(x[1:3])
+colMeans(x[,3])
+colMeans(x)
+colMeans(x[c(1,2,3)])
+colMeans(x[,c(1,2,3)])
+colMeans(x[,c(2,3,4)])
+colMeans(dat[, c(2,3,4)])
+print("huj")
+get_friedman_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	print("AVG")#
+	colMeans(dat[, c(2,3,4)])#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X)#
+}
+get_friedman_score("iris_35.csv")
+get_friedman_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	print("AVG")#
+	print(colMeans(dat[, c(2,3,4)]))#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	friedman.test(myDataLong$value, myDataLong$variable, myDataLong$X)#
+}
+get_friedman_score("iris_35.csv")
+get_wil_score("iris_35.csv")
+get_friedman_score("iris_10.csv")
+get_wilcox_score("iris_10.csv")
+get_wilcox_score <- function(filename) {#
+	dat <- read.csv(filename, header=TRUE)#
+	myDataLong <- melt(dat, id.vars=c("X"))#
+	pairwise.wilcox.test(myDataLong$value, myDataLong$variable, paired=TRUE)#
+}
+get_wilcox_score("iris_10.csv")
+get_friedman_score("mammographic_05.csv")
+get_wilcox_score("mammographic_05.csv")
+get_friedman_score("breast_cancer_20.csv")
+get_wilcox_score("breast_cancer_20.csv")
+get_friedman_score("heart_20.csv")
+get_wilcox_score("heart_20.csv")
